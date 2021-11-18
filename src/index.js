@@ -33,9 +33,10 @@ function serveJokesFromCategory(req, res) {
   res.json(foundJokes);
 }
 
+const port = process.env.PORT || 5000;
 //start the app listening on a port.
-app.listen(5000, () => {
-  console.log("Express server started listening ok!");
+app.listen(port, () => {
+  console.log("Express server started listening ok, probably on port: " + port);
 });
 
 function serveWelcome(req, res) {
